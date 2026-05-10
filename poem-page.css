@@ -1,0 +1,281 @@
+/* ============================================================
+   poem-page.css — Shared styles for all author poem pages
+   Elegant, vintage dual-column layout.
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Cormorant Garamond', 'EB Garamond', 'Times New Roman', Georgia, serif;
+    background-color: #faf7f2;
+    color: #2b2b28;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== MAIN CONTAINER — two columns with a delicate divider ===== */
+.container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    left: 280px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(
+        to bottom,
+        transparent 2rem,
+        #c4b7a6 2rem,
+        #c4b7a6 calc(100% - 2rem),
+        transparent calc(100% - 2rem)
+    );
+    opacity: 0.6;
+}
+
+/* ===== LEFT COLUMN — Authors Index ===== */
+.sidebar {
+    padding: 4rem 2rem 4rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    margin-bottom: 3.5rem;
+}
+
+.back-link {
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #a09480;
+    text-decoration: none;
+    margin-bottom: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #a0522d;
+}
+
+.site-title {
+    font-family: 'Cormorant Garamond', 'EB Garamond', 'Times New Roman', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #3d3929;
+    letter-spacing: 0.03em;
+    line-height: 1.3;
+    border-bottom: 1px solid #d4c9b8;
+    padding-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.site-subtitle {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #8c8069;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-style: normal;
+}
+
+.author-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.author-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.author-list a {
+    display: block;
+    padding: 0.5rem 0.8rem 0.5rem 0;
+    text-decoration: none;
+    color: #5a5344;
+    font-size: 1.1rem;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    border-left: 3px solid transparent;
+    padding-left: 0;
+}
+
+.author-list a:hover {
+    color: #a0522d;
+    padding-left: 0.6rem;
+    border-left: 3px solid #c4a882;
+}
+
+.author-list a.active {
+    color: #a0522d;
+    border-left: 3px solid #a0522d;
+    padding-left: 0.6rem;
+    font-weight: 600;
+}
+
+.author-list .poem-count {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #b0a392;
+    margin-left: 0.3rem;
+    font-style: normal;
+}
+
+/* ===== RIGHT COLUMN — Poems ===== */
+.content {
+    padding: 4rem 3rem 4rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.content-header {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0d7cb;
+    padding-bottom: 1.2rem;
+}
+
+.content-header h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #3d3929;
+    letter-spacing: 0.03em;
+}
+
+.poem-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.poem-item {
+    border-bottom: 1px solid #e8e1d5;
+    padding: 1.2rem 0;
+    transition: background 0.2s;
+}
+
+.poem-item:last-child {
+    border-bottom: none;
+}
+
+.poem-item:hover {
+    background: #fdfbf7;
+}
+
+.poem-item a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+
+.poem-title-uk {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #3d3929;
+    margin-bottom: 0.1rem;
+    letter-spacing: 0.02em;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+}
+
+.poem-title-en {
+    font-size: 0.9rem;
+    color: #8c8069;
+    font-style: italic;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.4rem;
+}
+
+.poem-excerpt {
+    margin-top: 0.3rem;
+    font-size: 0.95rem;
+    color: #6b6050;
+    font-style: italic;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+/* ===== SUBTLE ORNAMENTAL DETAILS ===== */
+.ornament {
+    text-align: center;
+    font-size: 1rem;
+    color: #c4b7a6;
+    letter-spacing: 0.4em;
+    margin: 1rem 0;
+    user-select: none;
+}
+
+.footer-note {
+    margin-top: auto;
+    padding-top: 3rem;
+    font-size: 0.8rem;
+    color: #b0a392;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-top: 1px solid #e0d7cb;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .container::before {
+        display: none;
+    }
+    .sidebar {
+        padding: 2rem 1.5rem;
+        border-bottom: 1px solid #d4c9b8;
+    }
+    .content {
+        padding: 2rem 1.5rem;
+    }
+    .author-list a:hover {
+        padding-left: 0.4rem;
+    }
+}
+
+/* ===== SCROLLBAR — barely there ===== */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #faf7f2;
+}
+::-webkit-scrollbar-thumb {
+    background: #d4c9b8;
+    border-radius: 3px;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Українська Поезія — Ukrainian Poetry in Translation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Introduction section styling */
+        .introduction {
+            max-width: 700px;
+            margin: 0 auto 3.5rem;
+            text-align: center;
+        }
+
+        .introduction p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #5a5344;
+            margin-bottom: 1.2rem;
+            font-style: italic;
+        }
+
+        .introduction .intro-uk {
+            font-style: italic;
+            color: #3d3929;
+        }
+
+        .introduction .intro-en {
+            color: #6b6050;
+            font-style: italic;
+        }
+
+        .intro-divider {
+            text-align: center;
+            color: #c4b7a6;
+            font-size: 1rem;
+            margin: 1.5rem 0;
+            letter-spacing: 0.5em;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+
+        <!-- Header -->
+        <header class="site-header">
+            <h1 class="site-title">Українська Поезія</h1>
+            <p class="site-subtitle">Ukrainian Poetry &middot; in Translation</p>
+            <div class="header-rule"></div>
+        </header>
+
+        <!-- Introduction -->
+        <section class="introduction">
+            <p class="intro-uk">
+                Ці поети — з Розстріляного Відродження і з покоління шістдесятників — 
+                творили щось таке нове, таке дивне й живе, що й досі не вкладається в 
+                жодні рамки. Їх ламали. Держава їх знищувала — фізично, морально, 
+                затирала імена й тексти. Але голос не зник. Читати їх зараз — це акт 
+                упертої тяглості. Ви намагалися стерти цей голос, а я тримаю його в 
+                роті. Ви програли.
+            </p>
+            <div class="intro-divider">❧</div>
+            <p class="intro-en">
+                These poets — from the Executed Renaissance and from the generation of 
+                the Sixtiers — were making something so new, so strange and vital, it still 
+                resists every category. The state broke them. It erased their names, 
+                buried their work, silenced what it could not control. But the voice 
+                remained. Reading them now feels like an act of stubborn continuity. 
+                You tried to erase this voice, and I am holding it in my mouth. 
+                You failed.
+            </p>
+        </section>
+
+        <!-- Carousel Section -->
+        <section class="carousel-section" aria-label="Authors carousel">
+            <h2 class="section-label">Оберіть автора &mdash; Select an Author</h2>
+
+            <div class="carousel-wrapper">
+                <!-- Left scroll button -->
+                <button class="scroll-btn scroll-btn-left" id="scrollLeft" aria-label="Scroll left">
+                    <span>&#8249;</span>
+                </button>
+
+                <!-- Track -->
+                <div class="carousel-track" id="carouselTrack">
+
+                    <!-- Author Card: Василь Бобинський -->
+                    <div class="author-card">
+                        <a href="vasyl-bobynskiy.html" class="author-link">
+                            <div class="portrait-frame">
+                                <img
+                                    src="vasyl-bobynskiy.png"
+                                    alt="Василь Бобинський"
+                                    class="author-portrait"
+                                    loading="lazy"
+                                >
+                            </div>
+                            <div class="author-name-container">
+                                <span class="author-name-uk">Василь Бобинський</span>
+                                <span class="author-name-en">Vasyl Bobynskyi</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Author Card: Микола Вінграновський -->
+                    <div class="author-card">
+                        <a href="mykola-vingranovskiy.html" class="author-link">
+                            <div class="portrait-frame">
+                                <img
+                                    src="mykola-vingranovskiy.png"
+                                    alt="Микола Вінграновський"
+                                    class="author-portrait"
+                                    loading="lazy"
+                                >
+                            </div>
+                            <div class="author-name-container">
+                                <span class="author-name-uk">Микола Вінграновський</span>
+                                <span class="author-name-en">Mykola Vingranovskyi</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Author Card: Василь Стус -->
+                    <div class="author-card">
+                        <a href="vasyl-stus.html" class="author-link">
+                            <div class="portrait-frame">
+                                <img
+                                    src="vasyl-stus.png"
+                                    alt="Василь Стус"
+                                    class="author-portrait"
+                                    loading="lazy"
+                                >
+                            </div>
+                            <div class="author-name-container">
+                                <span class="author-name-uk">Василь Стус</span>
+                                <span class="author-name-en">Vasyl Stus</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Author Card: Ґео Шкурупій -->
+                    <div class="author-card">
+                        <a href="geo-shukupii.html" class="author-link">
+                            <div class="portrait-frame">
+                                <img
+                                    src="geo-shukupii.png"
+                                    alt="Ґео Шкурупій"
+                                    class="author-portrait"
+                                    loading="lazy"
+                                >
+                            </div>
+                            <div class="author-name-container">
+                                <span class="author-name-uk">Ґео Шкурупій</span>
+                                <span class="author-name-en">Geo Shkupii</span>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Right scroll button -->
+                <button class="scroll-btn scroll-btn-right" id="scrollRight" aria-label="Scroll right">
+                    <span>&#8250;</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="ornament">&#10086;</div>
+            <p class="footer-text">збірка української поезії &middot; collection of ukrainian poetry</p>
+        </footer>
+
+    </div>
+
+    <script>
+        (function() {
+            const track = document.getElementById('carouselTrack');
+            const btnLeft = document.getElementById('scrollLeft');
+            const btnRight = document.getElementById('scrollRight');
+
+            if (!track || !btnLeft || !btnRight) return;
+
+            function getScrollAmount() {
+                const card = track.querySelector('.author-card');
+                if (!card) return 320;
+                const cardWidth = card.offsetWidth;
+                const gap = parseFloat(getComputedStyle(track).columnGap) || 32;
+                return cardWidth + gap;
+            }
+
+            function updateButtonState() {
+                const tolerance = 4;
+                const atLeft = track.scrollLeft <= tolerance;
+                const atRight = track.scrollLeft + track.clientWidth >= track.scrollWidth - tolerance;
+
+                btnLeft.style.opacity = atLeft ? '0.25' : '1';
+                btnLeft.style.pointerEvents = atLeft ? 'none' : 'auto';
+
+                btnRight.style.opacity = atRight ? '0.25' : '1';
+                btnRight.style.pointerEvents = atRight ? 'none' : 'auto';
+            }
+
+            btnLeft.addEventListener('click', () => {
+                track.scrollBy({
+                    left: -getScrollAmount(),
+                    behavior: 'smooth'
+                });
+            });
+
+            btnRight.addEventListener('click', () => {
+                track.scrollBy({
+                    left: getScrollAmount(),
+                    behavior: 'smooth'
+                });
+            });
+
+            let scrollTimeout;
+            track.addEventListener('scroll', () => {
+                if (scrollTimeout) cancelAnimationFrame(scrollTimeout);
+                scrollTimeout = requestAnimationFrame(updateButtonState);
+            });
+
+            window.addEventListener('resize', () => {
+                updateButtonState();
+            });
+
+            updateButtonState();
+
+            track.setAttribute('tabindex', '0');
+            track.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>

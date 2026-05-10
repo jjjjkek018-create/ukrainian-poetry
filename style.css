@@ -1,0 +1,385 @@
+/* ============================================================
+   style.css — Ukrainian Poetry Main Page
+   Elegant, vintage, laptop-first with responsive adjustments
+   No cards, no frames, no glassmorphism, no neon.
+   ============================================================ */
+
+/* ----- RESET & BASE ----- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cormorant Garamond', 'EB Garamond', 'Times New Roman', Georgia, serif;
+    background-color: #faf7f2;
+    color: #2b2b28;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ----- MAIN CONTAINER ----- */
+.main-container {
+    max-width: 1100px;
+    width: 100%;
+    padding: 3.5rem 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ----- HEADER ----- */
+.site-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.site-title {
+    font-size: 2.4rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #3d3929;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+}
+
+.site-subtitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: #8c8069;
+    margin-top: 0.5rem;
+}
+
+.header-rule {
+    width: 120px;
+    height: 1px;
+    background-color: #c4b7a6;
+    margin: 1.5rem auto 0;
+}
+
+/* ----- CAROUSEL SECTION ----- */
+.carousel-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #a09480;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+/* ----- CAROUSEL WRAPPER ----- */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* ----- CAROUSEL TRACK ----- */
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0.5rem 0.8rem 1.2rem;
+    scrollbar-width: thin;
+    scrollbar-color: #d4c9b8 transparent;
+    flex: 1;
+    outline: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+    height: 5px;
+}
+
+.carousel-track::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+    background: #d4c9b8;
+    border-radius: 4px;
+}
+
+/* ----- AUTHOR CARD (not a card — a delicate linked figure) ----- */
+.author-card {
+    flex: 0 0 auto;
+    width: 220px;
+    text-align: center;
+}
+
+.author-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+
+/* ----- PORTRAIT FRAME — integrated, not a card ----- */
+.portrait-frame {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.4s ease;
+}
+
+.portrait-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(164, 142, 110, 0.35);
+    pointer-events: none;
+    transition: border-color 0.4s ease;
+}
+
+.author-link:hover .portrait-frame {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+.author-link:hover .portrait-frame::after {
+    border-color: rgba(160, 82, 45, 0.45);
+}
+
+.author-portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(0.2) sepia(0.08);
+    transition: filter 0.4s ease, transform 0.6s ease;
+}
+
+.author-link:hover .author-portrait {
+    filter: grayscale(0) sepia(0);
+    transform: scale(1.04);
+}
+
+/* ----- AUTHOR NAMES ----- */
+.author-name-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.author-name-uk {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #3d3929;
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease;
+}
+
+.author-name-en {
+    font-size: 0.8rem;
+    color: #8c8069;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-style: normal;
+    transition: color 0.3s ease;
+}
+
+.author-link:hover .author-name-uk {
+    color: #a0522d;
+}
+
+.author-link:hover .author-name-en {
+    color: #6b5e4a;
+}
+
+/* ----- SCROLL BUTTONS ----- */
+.scroll-btn {
+    flex: 0 0 auto;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #d4c9b8;
+    background: #faf7f2;
+    color: #8c8069;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    z-index: 2;
+    line-height: 1;
+}
+
+.scroll-btn:hover {
+    color: #a0522d;
+    border-color: #c4a882;
+    background: #f5efe5;
+}
+
+.scroll-btn span {
+    position: relative;
+    top: -1px;
+}
+
+.scroll-btn-left {
+    margin-right: 0.5rem;
+}
+
+.scroll-btn-right {
+    margin-left: 0.5rem;
+}
+
+/* ----- FOOTER ----- */
+.site-footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+}
+
+.ornament {
+    font-size: 1.1rem;
+    color: #c4b7a6;
+    margin-bottom: 0.8rem;
+    user-select: none;
+}
+
+.footer-text {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #b0a392;
+}
+
+/* ============================================================
+   RESPONSIVE — laptops first, then smartphones
+   ============================================================ */
+
+@media (max-width: 900px) {
+    .main-container {
+        padding: 2.5rem 1.8rem 1.5rem;
+    }
+
+    .site-title {
+        font-size: 2rem;
+    }
+
+    .author-card {
+        width: 190px;
+    }
+
+    .portrait-frame {
+        width: 150px;
+        height: 150px;
+    }
+
+    .carousel-track {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 16px;
+    }
+
+    .main-container {
+        padding: 2rem 1rem 1.5rem;
+        min-height: 100vh;
+    }
+
+    .site-title {
+        font-size: 1.7rem;
+    }
+
+    .site-subtitle {
+        font-size: 0.7rem;
+        letter-spacing: 0.18em;
+    }
+
+    .carousel-section {
+        justify-content: flex-start;
+        margin-top: 1.5rem;
+    }
+
+    .section-label {
+        font-size: 0.7rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .carousel-track {
+        gap: 1.2rem;
+        padding: 0.4rem 0.4rem 1rem;
+    }
+
+    .author-card {
+        width: 150px;
+    }
+
+    .portrait-frame {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 0.8rem;
+    }
+
+    .author-name-uk {
+        font-size: 0.95rem;
+    }
+
+    .author-name-en {
+        font-size: 0.7rem;
+    }
+
+    .scroll-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 1.3rem;
+    }
+
+    .scroll-btn-left {
+        margin-right: 0.2rem;
+    }
+
+    .scroll-btn-right {
+        margin-left: 0.2rem;
+    }
+
+    .site-footer {
+        margin-top: 2.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .author-card {
+        width: 130px;
+    }
+
+    .portrait-frame {
+        width: 100px;
+        height: 100px;
+    }
+
+    .carousel-track {
+        gap: 1rem;
+    }
+}
