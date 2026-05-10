@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Introduction section styling */
+
         .introduction {
             max-width: 700px;
             margin: 0 auto 3.5rem;
@@ -48,14 +48,12 @@
 
     <div class="main-container">
 
-        <!-- Header -->
         <header class="site-header">
             <h1 class="site-title">Українська Поезія</h1>
             <p class="site-subtitle">Ukrainian Poetry &middot; in Translation</p>
             <div class="header-rule"></div>
         </header>
 
-        <!-- Introduction -->
         <section class="introduction">
             <p class="intro-uk">
                 Ці поети — з Розстріляного Відродження і з покоління шістдесятників — 
@@ -77,7 +75,6 @@
             </p>
         </section>
 
-        <!-- Carousel Section -->
         <section class="carousel-section" aria-label="Authors carousel">
             <h2 class="section-label">Оберіть автора &mdash; Select an Author</h2>
 
@@ -87,10 +84,8 @@
                     <span>&#8249;</span>
                 </button>
 
-                <!-- Track -->
                 <div class="carousel-track" id="carouselTrack">
 
-                    <!-- Author Card: Василь Бобинський -->
                     <div class="author-card">
                         <a href="vasyl-bobynskiy.html" class="author-link">
                             <div class="portrait-frame">
@@ -108,7 +103,6 @@
                         </a>
                     </div>
 
-                    <!-- Author Card: Микола Вінграновський -->
                     <div class="author-card">
                         <a href="mykola-vingranovskiy.html" class="author-link">
                             <div class="portrait-frame">
@@ -126,7 +120,6 @@
                         </a>
                     </div>
 
-                    <!-- Author Card: Василь Стус -->
                     <div class="author-card">
                         <a href="vasyl-stus.html" class="author-link">
                             <div class="portrait-frame">
@@ -144,7 +137,23 @@
                         </a>
                     </div>
 
-                    <!-- Author Card: Ґео Шкурупій -->
+                    <div class="author-card">
+                        <a href="pavlo-tychyna.html" class="author-link">
+                            <div class="portrait-frame">
+                                <img
+                                    src="tychyna.png"
+                                    alt="Павло Тичина"
+                                    class="author-portrait"
+                                    loading="lazy"
+                                >
+                            </div>
+                            <div class="author-name-container">
+                                <span class="author-name-uk">Павло Тичина</span>
+                                <span class="author-name-en">Pavlo Tychyna</span>
+                            </div>
+                        </a>
+                    </div>
+
                     <div class="author-card">
                         <a href="geo-shukupii.html" class="author-link">
                             <div class="portrait-frame">
@@ -164,16 +173,19 @@
 
                 </div>
 
-                <!-- Right scroll button -->
                 <button class="scroll-btn scroll-btn-right" id="scrollRight" aria-label="Scroll right">
                     <span>&#8250;</span>
                 </button>
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="site-footer">
             <div class="ornament">&#10086;</div>
+            <footer class="site-footer">
+            <a href="bio.html" class="bio-link">про проєкт &middot; about the project</a>
+            <div class="ornament">&#10086;</div>
+            <p class="footer-text">збірка української поезії &middot; collection of ukrainian poetry</p>
+        </footer>
             <p class="footer-text">збірка української поезії &middot; collection of ukrainian poetry</p>
         </footer>
 

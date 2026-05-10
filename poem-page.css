@@ -1,8 +1,3 @@
-/* ============================================================
-   poem-page.css — Shared styles for all author poem pages
-   Elegant, vintage dual-column layout.
-   ============================================================ */
-
 *,
 *::before,
 *::after {
@@ -27,7 +22,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===== MAIN CONTAINER — two columns with a delicate divider ===== */
 .container {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -55,7 +49,6 @@ body {
     opacity: 0.6;
 }
 
-/* ===== LEFT COLUMN — Authors Index ===== */
 .sidebar {
     padding: 4rem 2rem 4rem 2.5rem;
     display: flex;
@@ -228,7 +221,6 @@ body {
     max-width: 600px;
 }
 
-/* ===== SUBTLE ORNAMENTAL DETAILS ===== */
 .ornament {
     text-align: center;
     font-size: 1rem;
@@ -248,7 +240,6 @@ body {
     border-top: 1px solid #e0d7cb;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
@@ -268,7 +259,6 @@ body {
     }
 }
 
-/* ===== SCROLLBAR — barely there ===== */
 ::-webkit-scrollbar {
     width: 6px;
 }
